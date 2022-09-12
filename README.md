@@ -140,10 +140,10 @@ action
 
 # Scrum Roles
 
-Chris Brown: Product Owner and Developer  
-Tahj Marshall: **Persistence Specialist**  
-Jacob Farrish: UI Developer  
-TJ Dailey: TBD
+**Chris Brown**: Product Owner and Developer  
+**Tahj Marshall**: Persistence Specialist 
+**Jacob Farrish**: UI Developer  
+**TJ Dailey**: TBD
 
 # Weekly Meetings
 
