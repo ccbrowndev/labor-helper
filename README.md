@@ -143,7 +143,7 @@ action
 **Chris Brown**: Product Owner and Developer  
 **Tahj Marshall**: Persistence Specialist       
 **Jacob Farrish**: UI Developer  
-**TJ Dailey**: TBD
+**TJ Dailey**: UI Developer
 
 # Weekly Meetings
 
