@@ -144,6 +144,7 @@ action
 **Tahj Marshall**: Persistence Specialist       
 **Jacob Farrish**: UI Developer  
 **TJ Dailey**: UI Developer
+**Brandon Nguyen**: UI Developer
 
 # Weekly Meetings
 
