@@ -106,7 +106,8 @@ action
                     "type": "string"
                 },
                 "startDate": {
-                    "type": "string"
+                    "type": "string",
+                    "format": "date"
                 },
                 "authorized": {
                     "type": "string"
@@ -123,14 +124,10 @@ action
             "required": [
                 "authorized",
                 "companyName",
-                "contactInformation",
-                "groupContact",
                 "groupName",
                 "id",
                 "location",
-                "numberOfWorkers",
                 "startDate",
-                "suppliesNeeded"
             ],
             "title": "LaborAction"
         }
@@ -144,9 +141,8 @@ action
 **Tahj Marshall**: Persistence Specialist       
 **Jacob Farrish**: UI Developer  
 **TJ Dailey**: Business Logic Developer
-
 **Brandon Nguyen**: UI Developer
 
 # Weekly Meetings
 
-Meetings will be on Teams, day and time is currently to be determined.
+Meetings will be on Teams on Thursdays at 9:00 pm.
