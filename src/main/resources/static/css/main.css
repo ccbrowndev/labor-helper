@@ -5,6 +5,7 @@ h1 {
 }
 #zipsearch{
     padding-left: 20px;
+    align-content: center;
 }
 
 
@@ -14,8 +15,8 @@ h1 {
     background-color: lightskyblue;
     padding-bottom:300px;
     padding-top: 100px;
-    padding-left: 30px;
-    padding-right: 50%;
+    padding-left: 25%;
+    padding-right: 25%;
     color: whitesmoke;
 
 
