@@ -1,10 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
 <head>
     <meta charset="UTF-8">
     <title>Labor Helper</title>
+    <link th:href="@{/css/main.css}" rel="stylesheet" />
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
 </head>
 <body>
-Test
+<div layout:fragment="content">
+
+    <article class="blog-post">
+        <h2 class="blog-post-title mb-1">Welcome to Labor Helper</h2>
+        <p class="blog-post-meta">September 25, 2022 </p>
+
+        <p>America is in the middle of a pivotal increase in worker organization and collective action. Over 70 percent of Americans approve of unionization in 2022, the highest approval rating seen since 1965. </p>
+        <blockquote>
+            <p>"The labor movement was the principal force that transformed misery and despair into hope and progress."
+
+                -Martin Luther King, Jr.</p>
+        </blockquote>
+        <blockquote>
+            <p>"Labor cannot stand still. It must not retreat. It must go on, or go under. The most important word in the language of the working class is "solidarity."
+
+                -Harry Bridges</p>
+        </blockquote>
+        <p>We want to help. We created Labor Helper because we know we are not the only ones. Labor Helper is a platform that connects labor movements with the public. A victory for workers is a victory for us all.
+            Sign up to see how you can support a movement near you.
+        </p>
+    </article>
+    <button id="signupbutton" class="btn btn-primary btn-lg" type="button">Sign Up</button>
+
+</div>
 </body>
 </html>
