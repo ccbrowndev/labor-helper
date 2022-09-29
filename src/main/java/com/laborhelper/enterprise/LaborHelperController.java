@@ -8,11 +8,11 @@ public class LaborHelperController {
 
     /**
      * Handle the root (/) endpoint and return a start page
-     * @return
+     * @return This method returns an HTML page
      */
     @RequestMapping("/")
     public String index() {
-        return "start";
+        return "index";
     }
 
 }

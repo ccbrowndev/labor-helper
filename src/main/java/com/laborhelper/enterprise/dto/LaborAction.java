@@ -6,7 +6,7 @@ import java.util.Date;
 import java.util.Map;
 
 public @Data class LaborAction {
-    @NonNull private String id;
+    @NonNull private int id;
     @NonNull private String groupName;
     @NonNull private String companyName;
     @NonNull private String location;
