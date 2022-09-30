@@ -76,6 +76,10 @@ action
 
 <img src="classDiagram.png"/>
 
+# Database Diagram
+
+<img src="databaseDiagram.png"/>
+
 # JSON Schema
 
 ```
