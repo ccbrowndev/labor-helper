@@ -1,4 +1,10 @@
 package com.laborhelper.enterprise.service;
 
-public class OrganizerServiceStub {
+import com.laborhelper.enterprise.dto.Organizer;
+
+public class OrganizerServiceStub implements IOrganizerService{
+    @Override
+    public Organizer fetchbyId(int i) {
+        return null;
+    }
 }

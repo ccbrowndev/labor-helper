@@ -38,14 +38,14 @@ class WebLayerTest {
                 .andExpect(content().string(containsString("Hello World")));
     }
 
-    /*
+    /**
     For Businesslogic
     Given: a user has entered in a valid zip code of 45239
     When: The Search Button is Pressed
     Then: Display all results of that zip code
      */
 
-    /*
+
     @Test
     void whenuserentersvalidzipcode_returnresultsofzipcode()
 
@@ -70,5 +70,5 @@ class WebLayerTest {
         assertEquals("Should be 45239",45239,i);
     }
 
-*/
+
 }
