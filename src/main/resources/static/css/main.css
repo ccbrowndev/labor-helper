@@ -1,16 +1,42 @@
+/* Header */
 h1 {
     color: White;
     padding-bottom: 20px;
-
 }
-#zipsearch{
+#zipSearch{
     padding-left: 20px;
     align-content: center;
 }
 
+#searchButton {
+    color: lightskyblue;
+    margin-left: 10px;
+    border-color: lightskyblue;:
+}
 
-#contentdiv {
+#searchButton:hover{
+    background-color:ghostwhite;
+}
 
+.btn-primary {
+
+    background-color: #007bff;
+    border-color: ghostwhite;
+}
+
+/* Body */
+#body{
+    height: 100%;
+}
+
+#signupButton{
+    margin-top: 20px;
+    background-color:lightskyblue;
+    border-color:ghostwhite;
+    color:ghostwhite;
+}
+
+#contentDiv {
     height: 100%;
     background-color: lightskyblue;
     padding-bottom:300px;
@@ -18,11 +44,9 @@ h1 {
     padding-left: 25%;
     padding-right: 25%;
     color: whitesmoke;
-
-
-
 }
 
+/* Footer */
 #footer {
     position: relative;
     bottom: 0;
@@ -30,30 +54,5 @@ h1 {
     height: 100%; /* Footer height */
 
     background-color:lightskyblue;
-
 }
 
-#searchbutton {
-    color: lightskyblue;
-    margin-left: 10px;
-    border-color: lightskyblue;:
-
-
-}
-#searchbutton:hover{
-    background-color:ghostwhite;
-}
-#signupbutton{
-    margin-top: 20px;
-    background-color:lightskyblue;
-    border-color:ghostwhite;
-    color:ghostwhite;
-}
-#body{
-    height: 100%;
-}
-.btn-primary {
-
-    background-color: #007bff;
-    border-color: ghostwhite;
-}
