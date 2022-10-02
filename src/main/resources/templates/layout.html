@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link th:href="@{/css/main.css}" rel="stylesheet" />
-
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
 
 </head>
 <body id="body"  class="d-flex flex-column h-100 ">
@@ -18,9 +18,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
 
-            <form id="zipsearch"  class="d-flex align-content-center" role="search">
+            <form id="zipSearch"  class="d-flex align-content-center" role="search">
                 <input class="form-control me-2" type="search" placeholder="Enter Zip Code" aria-label="Search">
-                <button id="searchbutton" class="btn btn-outline-success" type="submit">Go</button>
+                <button id="searchButton" class="btn btn-outline-success" type="submit">Go</button>
             </form>
 
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
@@ -41,7 +41,7 @@
 </header>
 
 <div>
-    <main layout:fragment="content" id="contentdiv">
+    <main layout:fragment="content" id="contentDiv">
 
     </main>
 </div>
