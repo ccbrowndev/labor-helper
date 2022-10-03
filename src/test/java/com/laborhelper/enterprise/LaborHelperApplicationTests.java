@@ -16,6 +16,10 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.web.servlet.MockMvc;
 
+/**
+*The following two classes are meant to run a mocktest for the WebLayer
+*/
+
 @SpringBootTest
 class LaborHelperApplicationTests {
 
