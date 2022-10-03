@@ -5,6 +5,10 @@ import lombok.NonNull;
 import java.util.Date;
 import java.util.Map;
 
+/**
+*@NonNull lombok generates a null-check statement
+*/
+
 public @Data class LaborAction {
     @NonNull private String id;
     @NonNull private String groupName;
