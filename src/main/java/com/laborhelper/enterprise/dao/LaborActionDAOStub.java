@@ -3,7 +3,10 @@ package com.laborhelper.enterprise.dao;
 import com.laborhelper.enterprise.dto.LaborAction;
 import org.springframework.stereotype.Repository;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
 
 @Repository
 public class LaborActionDAOStub implements ILaborActionDAO {
@@ -11,8 +14,16 @@ public class LaborActionDAOStub implements ILaborActionDAO {
     Date la3124Date = new Date(1665406800000L);
     LaborAction uawLaborAction3124 = new LaborAction(3124,
             "United Auto Workers Local 863",
-            "Ford", "39°16'23.2\"N, 84°25'27.1\"W", la3124Date);
+            "Ford",
+            "39°16'23.2\"N, 84°25'27.1\"W",
+            la3124Date);
     Map<Integer, LaborAction> allLaborActions = Map.of(3124, uawLaborAction3124);
+
+    @Override
+    public List<LaborAction> fetchActionsByLocation(String locationInfo) {
+        // TODO: 10/15/2022
+        return null;
+    }
 
     @Override
     public List<LaborAction> fetchAllLaborActions() {
