@@ -1,19 +1,20 @@
 package com.laborhelper.enterprise.dto;
 
+import com.google.gson.annotations.SerializedName;
 import lombok.Data;
 import lombok.NonNull;
 import java.util.Date;
 import java.util.Map;
 
 public @Data class LaborAction {
-    @NonNull private int id;
-    @NonNull private String groupName;
-    @NonNull private String companyName;
-    @NonNull private String location;
-    @NonNull private Date startDate;
-    private String groupContact;
-    private String contactInformation;
-    private Boolean authorized;
-    private Integer numberOfWorkers;
-    private Map<String, String> suppliesNeeded;
+    @NonNull @SerializedName("id") Integer id;
+    @NonNull @SerializedName("groupName")private String groupName;
+    @NonNull @SerializedName("companyName")private String companyName;
+    @NonNull @SerializedName("location")private String location;
+    @NonNull @SerializedName("startDate")private Date startDate;
+    @SerializedName("groupContact")private String groupContact;
+    @SerializedName("contactInformation")private String contactInformation;
+    @SerializedName("authorized")private Boolean authorized;
+    @SerializedName("numberOfWorkers")private Integer numberOfWorkers;
+    @SerializedName("suppliesNeeded")private Map<String, String> suppliesNeeded;
 }
