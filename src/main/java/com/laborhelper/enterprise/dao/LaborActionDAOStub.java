@@ -12,7 +12,7 @@ import java.util.Map;
 public class LaborActionDAOStub implements ILaborActionDAO {
 
     Date la3124Date = new Date(1665406800000L);
-    LaborAction uawLaborAction3124 = new LaborAction(3124,
+    LaborAction uawLaborAction3124 = new LaborAction(
             "United Auto Workers Local 863",
             "Ford",
             "39°16'23.2\"N, 84°25'27.1\"W",
