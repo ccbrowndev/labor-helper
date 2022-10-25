@@ -25,11 +25,8 @@ public @Data class LaborAction {
     @SerializedName("contactInformation")private String contactInformation;
     @SerializedName("authorized")private Boolean authorized;
     @SerializedName("numberOfWorkers")private Integer numberOfWorkers;
-    //@SerializedName("suppliesNeeded")private Map<String, String> suppliesNeeded;
+    @SerializedName("suppliesNeeded")private Map<String, String> suppliesNeeded;
 
-    public LaborAction(int i, String s, String ford, String s1, Date la3124Date) {
-
-    }
 
     public LaborAction() {
 
