@@ -2,10 +2,11 @@ package com.laborhelper.enterprise.dao;
 
 import com.laborhelper.enterprise.dto.LaborAction;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import java.io.IOException;
 import java.util.List;
-
+@Repository("laborActionDAO")
 public class LaborActionSQLDAO implements ILaborActionDAO {
 
     @Autowired

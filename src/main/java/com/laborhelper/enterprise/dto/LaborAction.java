@@ -3,11 +3,9 @@ package com.laborhelper.enterprise.dto;
 import com.google.gson.annotations.SerializedName;
 import lombok.Data;
 import lombok.NonNull;
+import org.jetbrains.annotations.NotNull;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 import java.util.Map;
 
@@ -25,10 +23,16 @@ public @Data class LaborAction {
     @SerializedName("contactInformation")private String contactInformation;
     @SerializedName("authorized")private Boolean authorized;
     @SerializedName("numberOfWorkers")private Integer numberOfWorkers;
-    //@SerializedName("suppliesNeeded")private Map<String, String> suppliesNeeded;
 
-    public LaborAction(int i, String s, String ford, String s1, Date la3124Date) {
+    @ElementCollection
+    @SerializedName("suppliesNeeded")private Map<String, String> suppliesNeeded;
 
+    public LaborAction(@NotNull String groupName, @NotNull String companyName,
+                       @NotNull String location, @NotNull Date startDate) {
+        this.groupName = groupName;
+        this.companyName = companyName;
+        this.location = location;
+        this.startDate = startDate;
     }
 
     public LaborAction() {
