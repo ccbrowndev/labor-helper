@@ -2,69 +2,98 @@
 <html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{layout}">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <meta charset="UTF-8">
+  <title>Login & Registration Form</title>
+  <link th:href="@{/css/main.css}" rel="stylesheet" />
+  <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+  <link th:href="@{/js/index.js}" rel="script" />
 </head>
 <body>
 <div layout:fragment="content" class="d-flex  align-items-center mt-5">
 
-
   <div class="card">
+    <div class="container">
 
-    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-      <li class="nav-item text-center">
-        <a class="nav-link active btl" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Login</a>
-      </li>
-      <li class="nav-item text-center">
-        <a class="nav-link btr" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Signup</a>
-      </li>
+    <div class="forms">
+      <div class="form login">
 
-    </ul>
-    <div class="tab-content" id="pills-tabContent">
-      <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+        <form action="#">
+          <div class="input-field">
+            <input type="text" placeholder="Enter your email" required>
+            <i class="uil uil-envelope icon"></i>
+          </div>
+          <div class="input-field">
+            <input type="password" class="password" placeholder="Enter your password" required>
+            <i class="uil uil-lock icon"></i>
+            <i class="uil uil-eye-slash showHidePw"></i>
+          </div>
 
-        <div class="form px-4 pt-5">
+          <div class="checkbox-text">
+            <div class="checkbox-content">
+              <input type="checkbox" id="logCheck">
+              <label for="logCheck" class="text">Remember me</label>
+            </div>
 
-          <input type="text" name="" class="form-control" placeholder="Email or Phone">
+            <a href="#" class="text">Forgot password?</a>
+          </div>
 
-          <input type="text" name="" class="form-control" placeholder="Password">
-          <button class="btn btn-dark btn-block">Login</button>
+          <div class="input-field button">
+            <input type="button" value="Login">
+          </div>
+        </form>
 
+        <div class="login-signup">
+                    <span class="text">Need an account?
+                        <a href="#" class="text signup-link"><u>SIGNUP</u></a>
+                    </span>
         </div>
-
-
-
-      </div>
-      <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-
-
-        <div class="form px-4">
-
-          <input type="text" name="" class="form-control" placeholder="Name">
-
-          <input type="text" name="" class="form-control" placeholder="Email">
-
-          <input type="text" name="" class="form-control" placeholder="Phone">
-
-          <input type="text" name="" class="form-control" placeholder="Password">
-
-          <button class="btn btn-dark btn-block">Signup</button>
-
-
-        </div>
-
-
-
       </div>
 
+      <!-- Registration -->
+      <div class="form signup">
+        <span class="title">Registration</span>
+
+        <form action="#">
+          <div class="input-field">
+            <input type="text" placeholder="Enter your name" required>
+            <i class="uil uil-user"></i>
+          </div>
+          <div class="input-field">
+            <input type="text" placeholder="Enter your email" required>
+            <i class="uil uil-envelope icon"></i>
+          </div>
+          <div class="input-field">
+            <input type="password" class="password" placeholder="Create a password" required>
+            <i class="uil uil-lock icon"></i>
+          </div>
+          <div class="input-field">
+            <input type="password" class="password" placeholder="Confirm a password" required>
+            <i class="uil uil-lock icon"></i>
+            <i class="uil uil-eye-slash showHidePw"></i>
+          </div>
+
+          <div class="checkbox-text">
+            <div class="checkbox-content">
+              <input type="checkbox" id="termCon">
+              <label for="termCon" class="text">I accepted all terms and conditions</label>
+            </div>
+          </div>
+
+          <div class="input-field button">
+            <input type="button" value="Signup">
+          </div>
+        </form>
+
+        <div class="login-signup">
+                    <span class="text">Already a member?
+                        <a href="#" class="text login-link">Login Now</a>
+                    </span>
+        </div>
+      </div>
     </div>
-
-
-
-
   </div>
-
-
+    </div>
 </div>
 </body>
 </html>
+

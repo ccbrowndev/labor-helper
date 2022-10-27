@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link th:href="@{/css/main.css}" rel="stylesheet" />
-
-
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
 </head>
 <body id="body"  class="d-flex flex-column h-100 ">
 <header id="header">
 <nav id="nav" class="navbar navbar-expand-md navbar-dark fixed-top bg-dark ">
     <div class=" flex container-fluid">
 
-        <a class="navbar-brand" href="#">Labor Helper</a>
+        <a class="navbar-brand" th:href="@{/}">Labor Helper</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -25,10 +24,10 @@
 
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" th:href="@{/}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" th:href="@{/registration.html}">Log In</a>
+                    <a class="nav-link active" th:href="@{/registration}">Log In</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link disabled">My Account</a>

@@ -8,12 +8,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class LaborHelperController {
 
     /**
-     * Handle the root (/) endpoint and return a start page
-     * @return
+     * Handle the root (/) endpoint
+     * @return the home page of the application
      */
     @GetMapping ("/")
     public String index() {
         return "start";
     }
 
+    /**
+     * Handle the registration (/registration) endpoint
+     * @return a login and registration area
+     */
+    @GetMapping ("/registration")
+    public String registration() { return "registration";}
 }
