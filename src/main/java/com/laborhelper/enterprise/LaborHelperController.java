@@ -1,35 +1,35 @@
 package com.laborhelper.enterprise;
 
-import com.laborhelper.enterprise.dto.LaborAction;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class LaborHelperController {
 
     /**
-     * Handle the root (/) endpoint and return a start page
-     * @return
+     * Handle the root (/) endpoint
+     * @return the home page of the application
      */
+   //change start to index
     @GetMapping ("/")
     public String index() {
-        return "start";
+        return "index";
     }
 
-   /*
-   Creating labor Action Request for Json
-    */
-    @PostMapping
-            ( value = "/createLaborAction", consumes = "application/json", produces = "application/json")
-    public LaborAction createLaborAction(@RequestBody LaborAction laborAction){
-        int i = 1 + 1 ;
-        return laborAction;
+    //Get Mapping to laborAction
+    @GetMapping("laborAction")
+    public String laborAction(Model model){
 
+        return "laborAction";
     }
 
 
+    /**
+     * Handle the registration (/registration) endpoint
+     * @return a login and registration area
+     */
+    @GetMapping ("/registration")
+    public String registration() { return "registration";}
 }
