@@ -1,6 +1,7 @@
 package com.laborhelper.enterprise;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -15,5 +16,17 @@ public class LaborHelperController {
     public String index() {
         return "start";
     }
+
+    //Routing to other pages
+    @GetMapping("/registration")
+    public String registration(){
+        return "registration";
+    }
+
+    @GetMapping("/layout")
+    public String layout(){
+        return "layout";
+    }
+
 
 }
