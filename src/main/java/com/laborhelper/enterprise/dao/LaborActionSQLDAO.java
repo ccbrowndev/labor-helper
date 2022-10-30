@@ -25,8 +25,7 @@ public class LaborActionSQLDAO implements ILaborActionDAO {
 
     @Override
     public LaborAction save(LaborAction laborAction) {
-        LaborAction createdLaborAction = laborActionRepository.save(laborAction);
-        return createdLaborAction;
+        return laborActionRepository.save(laborAction);
     }
 
     @Override

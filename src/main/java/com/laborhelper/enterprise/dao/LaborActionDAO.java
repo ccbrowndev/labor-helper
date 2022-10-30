@@ -17,8 +17,7 @@ public class LaborActionDAO implements ILaborActionDAO{
         laborActionRetrofitDAO.getLaborAction(locationInfo);
         Call<List<LaborAction>> allAction = laborActionRetrofitDAO.getLaborAction(locationInfo);
         Response<List<LaborAction>> execute = allAction.execute();
-        List<LaborAction> actions = execute.body();
-        return actions;
+        return execute.body();
     }
 
     @Override
