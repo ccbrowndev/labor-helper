@@ -23,13 +23,8 @@ public class LaborActionService implements ILaborActionService {
     }
 
     @Override
-    public LaborAction fetchByID(int id) {
-        return null;
-    }
-
-//    @Override
     @Cacheable(value="laborAction", key="#id")
-    public LaborAction fetchById(int id) {
+    public LaborAction fetchByID(int id) {
         LaborAction foundLaborAction = laborActionDAO.fetchById(id);
         return foundLaborAction;
     }
