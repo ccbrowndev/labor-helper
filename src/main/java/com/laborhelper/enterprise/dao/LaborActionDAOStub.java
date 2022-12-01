@@ -1,6 +1,7 @@
 package com.laborhelper.enterprise.dao;
 
 import com.laborhelper.enterprise.dto.LaborAction;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -9,6 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 @Repository
+@Profile("test")
 public class LaborActionDAOStub implements ILaborActionDAO {
 
     Date la3124Date = new Date(1665406800000L);
