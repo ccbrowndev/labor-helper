@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 @Repository
-@Profile("test")
+//@Profile("test")
 public class LaborActionDAOStub implements ILaborActionDAO {
 
     Date la3124Date = new Date(1665406800000L);
