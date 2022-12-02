@@ -13,7 +13,7 @@ public class LaborHelperController {
      */
     @GetMapping ("/")
     public String index() {
-        return "index";
+        return "start";
     }
 
     /**
