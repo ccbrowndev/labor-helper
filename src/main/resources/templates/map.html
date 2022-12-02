@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Map</title>
+    <link th:href="@{/css/main.css}" rel="stylesheet" />
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+    <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.js"></script>
+</head>
+<body>
+    <div id="map-canvas" style="width: 800px; height: 500px;">
+    </div>
+</body>
+</html>
+
+<script type="text/javascript">
+    var map;
+    var latlng;
+    var infowindow;
+
+    $(document).ready(function() {
+        var data = [{
+            "description": "Action A: ",
+            "location": "Starbucks",
+            "latitude": "39.128564",
+            "longitude": "-84.509986"
+        },
+            {
+                "description": "Action B: ",
+                "location": "Buffalo Wild Wings",
+                "latitude": "39.128316",
+                "longitude": "-84.513899"
+            }
+        ]
+        ViewCustInGoogleMap(data);
+    });
+    function ViewCustInGoogleMap(data) {
+        var gm = google.maps;
+        var mapOptions = {
+            center: new google.maps.LatLng(39.1320, -84.5155),
+            zoom: 16,
+        };
+
+        map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+        infowindow = new google.maps.InfoWindow();
+        var marker, i;
+
+        for (var i = 0; i < data.length; i++) {
+            marker = new gm.Marker({
+                position: new gm.LatLng(data[i]['latitude'], data[i]['longitude']),
+                map: map,
+            });
+
+
+            google.maps.event.addListener(
+                marker,
+                'click',
+                (
+                    function(marker, i) {
+                        return function() {
+                            infowindow.setContent(data[i]['description'] + data[i]['location']);
+                            infowindow.open(map, marker);
+                        };
+                    }
+                )(marker, i)
+            );
+        }
+    }
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgDWBXUaAtdpQJ8wjRHzQLUFrIaE3RYG0&sensor=true"
+        type="text/javascript"></script>
