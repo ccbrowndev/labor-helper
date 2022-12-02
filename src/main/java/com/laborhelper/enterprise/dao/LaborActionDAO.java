@@ -43,4 +43,9 @@ public class LaborActionDAO implements ILaborActionDAO{
         // TODO: 10/15/2022
         return null;
     }
+
+    @Override
+    public List<LaborAction> fetchLaborActionByzipCode(int zipCode) {
+        return null;
+    }
 }

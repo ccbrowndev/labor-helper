@@ -40,4 +40,9 @@ public class LaborActionSQLDAO implements ILaborActionDAO {
     public LaborAction fetchById(int id) {
         return null;
     }
+
+    @Override
+    public List<LaborAction> fetchLaborActionByzipCode(int zipCode) {
+        return LaborActionRepository.findByzipCode(zipCode);
+    }
 }

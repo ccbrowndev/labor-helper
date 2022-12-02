@@ -13,5 +13,6 @@ public interface ILaborActionDAO {
     LaborAction save(LaborAction laborAction);
     void delete(int id);
     LaborAction fetchById(int id);
+    List<LaborAction> fetchLaborActionByzipCode(int zipCode);
 
 }

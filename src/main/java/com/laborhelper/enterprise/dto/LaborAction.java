@@ -11,6 +11,7 @@ import java.util.Map;
 
 @Entity
 public @Data class LaborAction {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @NonNull @SerializedName("id") Integer id;
@@ -18,6 +19,7 @@ public @Data class LaborAction {
     @NonNull @SerializedName("groupName")private String groupName;
     @NonNull @SerializedName("companyName")private String companyName;
     @NonNull @SerializedName("location")private String location;
+    @NonNull @SerializedName("zipCode")private Integer zipCode;
     @NonNull @SerializedName("startDate")private Date startDate;
     @SerializedName("groupContact")private String groupContact;
     @SerializedName("contactInformation")private String contactInformation;
@@ -28,11 +30,14 @@ public @Data class LaborAction {
     @SerializedName("suppliesNeeded")private Map<String, String> suppliesNeeded;
 
     public LaborAction(@NotNull String groupName, @NotNull String companyName,
-                       @NotNull String location, @NotNull Date startDate) {
+                       @NotNull String location, @NotNull Date startDate, @NotNull Integer zipCode) {
         this.groupName = groupName;
         this.companyName = companyName;
         this.location = location;
         this.startDate = startDate;
+        this.zipCode = zipCode;
+
+
     }
 
     public LaborAction() {

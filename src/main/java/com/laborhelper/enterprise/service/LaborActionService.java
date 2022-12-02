@@ -16,11 +16,21 @@ import java.util.List;
 public class LaborActionService implements ILaborActionService {
 
     @Autowired
-    private ILaborActionDAO laborActionDAO;
+    private static ILaborActionDAO laborActionDAO;
 
     public LaborActionService(ILaborActionDAO laborActionDAO){
         this.laborActionDAO = laborActionDAO;
     }
+
+
+    public static List<LaborAction> fetchLaborActionByzipCode() {
+        return fetchLaborActionByzipCode(0);
+    }
+
+    public static List<LaborAction> fetchLaborActionByzipCode(int zipCode) {
+        return laborActionDAO.fetchLaborActionByzipCode(zipCode);
+    }
+
 
     @Override
     @Cacheable(value="laborAction", key="#id")

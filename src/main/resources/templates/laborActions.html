@@ -1,0 +1,24 @@
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+  <meta charset="UTF-8">
+  <title>Labor Actions</title>
+  <link th:href="@{/css/main.css}" rel="stylesheet" />
+  <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+  <link th:href="@{/js/index.js}" rel="script" />
+</head>
+<body>
+<div layout:fragment="content">
+
+  <div class="list-group" th:each="laborAction : ${laborActions}">
+    <a th:href="@{'/laborActionById/'+ ${laborAction.id} + '/'}" class="list-group-item list-group-item-action">
+      <p th:text="${laborActions}"/>
+    </a>
+  </div>
+
+</div>
+</body>
+</html>

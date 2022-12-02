@@ -18,7 +18,7 @@ public class LaborActionDAOStub implements ILaborActionDAO {
             "United Auto Workers Local 863",
             "Ford",
             "39°16'23.2\"N, 84°25'27.1\"W",
-            la3124Date);
+            la3124Date, 45069);
     Map<Integer, LaborAction> allLaborActions = Map.of(3124, uawLaborAction3124);
 
     @Override
@@ -46,5 +46,10 @@ public class LaborActionDAOStub implements ILaborActionDAO {
     @Override
     public LaborAction fetchById(int id) {
         return allLaborActions.get(id);
+    }
+
+    @Override
+    public List<LaborAction> fetchLaborActionByzipCode(int zipCode) {
+        return null;
     }
 }

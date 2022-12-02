@@ -14,4 +14,8 @@ public interface ILaborActionService {
 
     List<LaborAction> fetchAll();
 
+    static List<LaborAction> fetchLaborActionByzipCode(int zipCode) {
+        return null;
+    }
+
 }
